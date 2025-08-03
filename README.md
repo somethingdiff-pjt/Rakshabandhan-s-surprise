@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raksha Bandhan Gift</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Tangerine:wght@700&display=swap');
+        
+        :root {
+            --primary: #d9232e;
+            --secondary: #ffd700;
+            --accent: #ff8c00;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #c6dae6;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .handwriting {
+            font-family: 'Tangerine', cursive;
+        }
+        
+        .rakhi {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+        
+        .diyas {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fadeInOut 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .pendant {
+            animation: swing 3s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        
+        @keyframes swing {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary);
+            opacity: 0.7;
+            animation: confettiFall 5s linear infinite;
+        }
+        
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+        
+        .ribbon {
+            position: relative;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ribbon:before, .ribbon:after {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: var(--primary);
+        }
+        
+        .ribbon:before {
+            top: -10px;
+            left: -20px;
+            transform: skewY(-45deg);
+        }
+        
+        .ribbon:after {
+            top: -10px;
+            right: -20px;
+            transform: skewY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating decorations -->
+    <div id="decorations"></div>
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-amber-50 to-amber-100 opacity-20"></div>
+        
+        <div class="container mx-auto px-4 z-10 text-center py-20">
+            <div class="ribbon">
+                <h1 class="text-2xl md:text-4xl font-bold tracking-wide">Raksha Bandhan Special</h1>
+            </div>
+            
+            <div class="bg-white bg-opacity-80 rounded-lg shadow-xl p-6 max-w-3xl mx-auto my-8 transform transition-all hover:scale-105 duration-300">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/03f50741-2f10-4443-9904-ab700319c979.png" alt="Traditional rakhi with gold thread and decorative pendant on a red velvet background" class="mx-auto rounded-lg mb-6 shadow-lg" />
+                
+                <h2 class="handwriting text-5xl md:text-6xl text-amber-700 mb-4">Happy Raksha Bandhan</h2>
+                <h3 class="text-xl md:text-2xl text-gray-700 mb-6">To my kaluaa</h3>
+                
+                <div class="pendant inline-block">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8292c319-d94f-400b-88fc-d499db402b9f.png" alt="Traditional golden pendant with intricate designs and red stones" class="heartbeat" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Message Section -->
+    <section class="py-16 bg-amber-50 relative">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <div class="handwriting text-4xl text-red-600 text-center mb-6">My Dear kajal didi,</div>
+                
+                <div class="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p class="mb-4">On this special day, I want to take a moment to tell you how much you mean to me. You're not just my sister, but my confidante, my partner in crime, and my greatest supporter.</p>
+                    
+                    <p class="mb-4">Remember all the laughter we've shared, the secrets we've kept, and the bonds we've strengthened over the years? Those are the treasures of my life.</p>
+                    
+                    <p class="mb-4 font-semibold">This Rakhi, I promise to always be there for you, just like you've always been there for me.</p>
+                </div>
+                
+                <div class="handwriting text-3xl text-red-600 text-center mt-8">Bs thoda padhai pr bhi focus krle bahn</div>
+                
+                <div class="flex justify-center mt-8">
+                    <button id="wishBtn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                        Click for Special Wish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="handwriting text-5xl text-amber-700 mb-12">Our Memories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all hover:scale-105 duration-300">
+                    <img src="1.jpeg" alt="Siblings laughing together with hands on each other's shoulders in a park" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Ghat Memories</h3>
+                        <p class="text-gray-600 mt-2">Remember when we went with maa & mausi</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all hover:scale-105 duration-300">
+                    <img src="three.jpeg" alt="Siblings sharing ice cream at the beach with sunset in background" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Sweet Moments</h3>
+                        <p class="text-gray-600 mt-2">Do you Remember our last Rakshabandhan's Day?</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all hover:scale-105 duration-300">
+                    <img src="3.jpeg" alt="Siblings wearing matching traditional clothes during a festival celebration" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Mumbai Trip</h3>
+                        <p class="text-gray-600 mt-2">your best trip till now you enjoyed too much
+                            with papa and relatives
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-red-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="handwriting text-3xl mb-4">RadhaRani always Bless You</div>
+            <p>Created with love for my kaluaa as RakshaBandhan's Gift</p>
+            <div class="flex justify-center space-x-4 mt-6">
+                <button class="heartbeat p-2 rounded-full bg-white bg-opacity-20">
+                    <img src="2.jpg" alt="Heart shaped rakhi with golden threads" />
+                </button>
+                <button class="heartbeat p-2 rounded-full bg-white bg-opacity-20">
+                    <img src="4.jpeg" alt="Sacred thread tied on wrist as blessing" />
+                </button>
+                <button class="heartbeat p-2 rounded-full bg-white bg-opacity-20">
+                    <img src="5.jpg" alt="Sister tying rakhi on brother's wrist" />
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create floating decorations
+            const decorations = document.getElementById('decorations');
+            const colors = ['#d9232e', '#ffd700', '#ff8c00', '#ffffff'];
+            
+            for (let i = 0; i < 20; i++) {
+                const decoration = document.createElement('div');
+                decoration.className = Math.random() > 0.5 ? 'rakhi' : 'diyas';
+                
+                // Random position and size
+                decoration.style.left = `${Math.random() * 100}%`;
+                decoration.style.top = `${Math.random() * 100}%`;
+                decoration.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                // Random delay for animation
+                decoration.style.animationDelay = `${Math.random() * 5}s`;
+                
+                // Set a placeholder image based on type
+                if (decoration.className === 'rakhi') {
+                    decoration.innerHTML = `<img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d2445337-e445-42c7-b35c-5aa1c70b4001.png" alt="Ornamental traditional rakhi with beads and embroidery" />`;
+                } else {
+                    decoration.innerHTML = `<img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a267574d-ac5f-4c76-8150-7bfb1d478963.png" alt="Glowing traditional diya with golden flame" />`;
+                }
+                
+                decorations.appendChild(decoration);
+            }
+            
+            // Create falling confetti
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.animationDelay = `${Math.random() * 5}s`;
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = `${Math.random() * 10 + 5}px`;
+                confetti.style.height = `${Math.random() * 10 + 5}px`;
+                document.body.appendChild(confetti);
+            }
+            
+            // Special wish button
+            document.getElementById('wishBtn').addEventListener('click', function() {
+                alert("May our sibling bond continue to shine brighter with each passing year. Happy Raksha Bandhan! ❤️");
+                
+                // Create some extra celebration
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.innerHTML = '<img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5463aff8-1b32-405a-a8ee-f29abbecf2aa.png" alt="Floating heart shaped confetti" />';
+                        heart.classList.add('heartbeat', 'rakhi');
+                        heart.style.position = 'fixed';
+                        heart.style.left = `${Math.random() * window.innerWidth}px`;
+                        heart.style.top = `${Math.random() * window.innerHeight}px`;
+                        heart.style.zIndex = '9999';
+                        document.body.appendChild(heart);
+                        
+                        // Remove after animation
+                        setTimeout(() => {
+                            heart.remove();
+                        }, 3000);
+                    }, i * 100);
+                }
+            });
+            
+            // Parallax effect on scroll
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.pageYOffset;
+                const pendants = document.querySelectorAll('.pendant');
+                
+                pendants.forEach(pendant => {
+                    pendant.style.transform = `rotate(${scrollPosition * 0.1}deg)`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
